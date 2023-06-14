@@ -17,19 +17,18 @@ const slides = [
     }
 ];
 
-// we initialize the selected dot
+
 let carouselIdx = 0;
 
 window.addEventListener("load", () => {
-    const dots = document.querySelectorAll(".dots > .dot") ;
-    console.log(dots[carouselIdx]);
-    dots[carouselIdx].classList.add("dot_selected") ;
-
-
+    // paramétrage du premier dot selected lors du chargement de la page
+    const dots = document.querySelectorAll(".dots > .dot");
+     dots[carouselIdx].classList.add("dot_selected");
+    
+     // paramétrage du premier slide lors du chargement de la page 
     const imageBanner = document.getElementById("bannerImg");
-    let slide = slides[carouselIdx];
+    let slide = slides[carouselIdx] ; 
     let slideImg = slide.image ; 
-    let tagLine = slide.tagLine ;
-
+    let tagLine = slide.tagLine ; 
     imageBanner.src = `./assets/images/slideshow/${slideImg}`;
-});
+})
