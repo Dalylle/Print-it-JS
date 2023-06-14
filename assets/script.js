@@ -45,7 +45,12 @@ window.addEventListener("load", () => {
         carouselIdx++;
         if (carouselIdx > 3) carouselIdx = 0 ; // paramétrage du nombres de dots selected 
         dots[carouselIdx].classList.add("dot_selected"); // Ajout du dot selected au dot suivant 
-        
-    } 
+
+
+        let slide = slides[carouselIdx] ; 
+        let slideImg = slide.image ; 
+        imageBanner.src = `./assets/images/slideshow/${slideImg}`; // Ajout du slideshow +1
+        tagLineBanner.innerHTML = tagLine; // Ajout du tagLine+1
+        } 
     
     )})
